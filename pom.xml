@@ -11,6 +11,61 @@
 		<module>mahout-parent</module>
 		<module>mahout-book</module>
 		<module>mahout-demo</module>
+		<module>mahout-app</module>
 	</modules>
+
+	<build>
+		<plugins>
+			<!-- 源码打包插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- JDK编译版本 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<inceptionYear>2014</inceptionYear>
+
+	<licenses>
+		<license>
+			<name>Apache 2</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>all</distribution>
+			<comments>Copyright 2014 (c) Gang Wang - All Right Reserved</comments>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>wgybzb</id>
+			<name>Gang Wang</name>
+			<email>wanggang@zxisl.com</email>
+			<url>http://github.com/wgybzbrobot</url>
+			<roles>
+				<role>ReleaseManager</role>
+				<role>Designer</role>
+				<role>Developer</role>
+			</roles>
+			<timezone>UTC-8</timezone>
+		</developer>
+	</developers>
 
 </project>
